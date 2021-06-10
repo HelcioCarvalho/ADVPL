@@ -12,6 +12,8 @@ Aqui abaixo serão listadas as funções desenvolvidadas no repositório.
 
 Fonte: 
 Exemplo da Tela
+![Captura de tela 2021-06-10 140131](https://user-images.githubusercontent.com/53917188/121566528-fcc5f600-c9f3-11eb-9278-bd4e3f2784c2.jpg)
+
 
 
 

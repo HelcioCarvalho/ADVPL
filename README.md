@@ -8,7 +8,11 @@ sua funcionalidade e imagem de forma rápida e fácil de localizar.
 Aqui abaixo serão listadas as funções desenvolvidadas no repositório.
 
 
-### 📋 Rotina de Eliminação de Redíduo de Pedido de Compras
+
+
+
+
+## 📋 Rotina de Eliminação de Redíduo de Pedido de Compras
 
 - Rotina que faz a leitura de um arquivo .txt e chama a rotina automática de Eliminação de Resíduo.
 - Modelo de Arquivo.txt
@@ -30,7 +34,7 @@ Fonte:
 
 
 
-### 📋 Tela Modelo MVC para Marcação (Tipo Markbowse)
+## 📋 Tela Modelo MVC para Marcação (Tipo Markbowse)
 
 Função/Tela Genérica para Marcação (MarkBrowse) MVC
  Recebe array de Cabeçalho[1] e Itens[1,1,1]

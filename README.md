@@ -28,3 +28,19 @@ Fonte:
 * [📄 Fonte ](https://github.com/HelcioCarvalho/ADVPL/blob/97dde592accf9f1de3b846bdc095dfb3ea0a63fd/HFATA001.prw)
 
 
+
+
+### 📋 Tela Modelo MVC para Marcação (Tipo Markbowse)
+
+Função/Tela Genérica para Marcação (MarkBrowse) MVC
+ Recebe array de Cabeçalho[1] e Itens[1,1,1]
+    Retorna Tabela Temporária  cAlias
+
+![image](https://user-images.githubusercontent.com/53917188/122407143-c807f080-cf57-11eb-8846-11325ebc1288.png)
+
+
+Fonte: 
+* [📄 Fonte ](https://github.com/HelcioCarvalho/ADVPL/blob/97dde592accf9f1de3b846bdc095dfb3ea0a63fd/HFATA001.prw)
+
+
+

@@ -40,7 +40,7 @@ Função/Tela Genérica para Marcação (MarkBrowse) MVC
 
 
 Fonte: 
-* [📄 Fonte ](https://github.com/HelcioCarvalho/ADVPL/blob/97dde592accf9f1de3b846bdc095dfb3ea0a63fd/HFATA001.prw)
+* [📄 Fonte ](https://github.com/HelcioCarvalho/ADVPL/blob/1761908f59f08f7c9d74bce41a24d41dc786bac8/HFATA002.PRW)
 
 
 

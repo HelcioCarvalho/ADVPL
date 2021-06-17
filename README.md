@@ -21,6 +21,8 @@ Aqui abaixo serão listadas as funções desenvolvidadas no repositório.
 11;001001;002991
 11;001006;000032
 ```
+![image](https://user-images.githubusercontent.com/53917188/122406171-03ee8600-cf57-11eb-9f56-4520845963be.png)
+
 
 Fonte: 
 * [📄 Fonte ](https://github.com/HelcioCarvalho/ADVPL/blob/97dde592accf9f1de3b846bdc095dfb3ea0a63fd/HFATA001.prw)

@@ -163,6 +163,6 @@ Static Function ElimResid(nPerc, cTipo, dEmisDe, dEmisAte, cCodigoDe, cCodigoAte
 
 	If !vazio(cCodigoDe) .or. !cCodigoAte$('Z') // Nunca fazer para todos
 		Processa({|lEnd| MA235PC(nPerc, cTipo, dEmisDe, dEmisAte, cCodigoDe, cCodigoAte, cProdDe, cProdAte,;
-			cFornDe, cFornAte, dDatprfde, dDatPrfAte, cItemDe, cItemAte, lConsEIC, aRecSC7)})
+		cFornDe, cFornAte, dDatprfde, dDatPrfAte, cItemDe, cItemAte, lConsEIC, aRecSC7)})
 	Endif
 return

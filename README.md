@@ -36,7 +36,7 @@ Fonte:
 
 ## 📋 Tela Modelo MVC para Marcação (Tipo Markbowse)
 
-Função/Tela Genérica para Marcação (MarkBrowse) MVC
+Função/Tela Genérica para Marcação (MarkBrowse) MVC com Tabela Temporária.
  Recebe array de Cabeçalho[1] e Itens[1,1,1]
     Retorna Tabela Temporária  cAlias
 

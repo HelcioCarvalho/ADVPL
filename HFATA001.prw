@@ -9,7 +9,6 @@
 Exemplo de arquivo:
 
 
-Empresa;Filial;Pedido
 01;001014;000006
 11;001001;024154
 
@@ -60,44 +59,31 @@ Static Function LerArquivo(cFile)
 				//Buscando o texto da linha atual
 				cLinAtu := oFile:GetLine()
 
-				If nAtual == 1 //Cabeçalho
-					While AT(cSeparador, cLinAtu) > 0 //Cria o Cabeçalho
-						cCabec := substring(cLinAtu, 1, AT(cSeparador, cLinAtu)-1)
-						aadd(aDadosCabec,{cCabec})
-						cLinAtu :=  substring(cLinAtu, AT(cSeparador, cLinAtu)+1 , len(cLinAtu)) //corta
-
-						If AT(cSeparador, cLinAtu) == 0 //Ultima Linha
-							aadd(aDadosCabec,{cLinAtu})
-						EndIf
-					EndDo
-				Else
-
-					If AT(cSeparador, cLinAtu) > 0 //Empresa procura ;
-							cEmpresaPc := substring(cLinAtu, 1, AT(cSeparador, cLinAtu)-1)
-						cLinAtu :=  substring(cLinAtu, AT(cSeparador, cLinAtu)+1 , len(cLinAtu)) //corta
-					Endif
-
-					If AT(cSeparador, cLinAtu) > 0 //Filial procura ;
-							cFilialPC := substring(cLinAtu, 1, AT(cSeparador, cLinAtu)-1)
-						cLinAtu :=  substring(cLinAtu, AT(cSeparador, cLinAtu)+1 , len(cLinAtu)) //corta
-					Endif
-
-					If AT(cSeparador, cLinAtu) > 0 //Pedido procura ;
-							cPedidoCompra := substring(cLinAtu, 1, AT(cSeparador, cLinAtu)-1)
-						cLinAtu :=  substring(cLinAtu, AT(cSeparador, cLinAtu)+1 , len(cLinAtu)) //corta
-					Else
-						cPedidoCompra := cLinAtu
-					Endif
-
-					aadd(aDadosElimina,{ cEmpresaPc, cFilialPC, cPedidoCompra  }    )
+				If AT(cSeparador, cLinAtu) > 0 //Empresa procura ;
+						cEmpresaPc := substring(cLinAtu, 1, AT(cSeparador, cLinAtu)-1)
+					cLinAtu :=  substring(cLinAtu, AT(cSeparador, cLinAtu)+1 , len(cLinAtu)) //corta
 				Endif
+
+				If AT(cSeparador, cLinAtu) > 0 //Filial procura ;
+						cFilialPC := substring(cLinAtu, 1, AT(cSeparador, cLinAtu)-1)
+					cLinAtu :=  substring(cLinAtu, AT(cSeparador, cLinAtu)+1 , len(cLinAtu)) //corta
+				Endif
+
+				If AT(cSeparador, cLinAtu) > 0 //Pedido procura ;
+						cPedidoCompra := substring(cLinAtu, 1, AT(cSeparador, cLinAtu)-1)
+					cLinAtu :=  substring(cLinAtu, AT(cSeparador, cLinAtu)+1 , len(cLinAtu)) //corta
+				Else
+					cPedidoCompra := cLinAtu
+				Endif
+
+				aadd(aDadosElimina,{ cEmpresaPc, cFilialPC, cPedidoCompra  }    )
 			EndDo
 		EndIf
 
 		//Fecha o arquivo e finaliza o processamento
 		oFile:Close()
 	EndIf
-
+	
 	If len(aDadosElimina) > 0
 		If	ApMsgYesNo("Foram encontrados, "+cvaltochar(len(aDadosElimina))+" pedidos. Deseja realizar Eliminar Resíduo?")
 			Processa({|| EliminaPedido(aDadosElimina)},"Eliminando Resíduos...")
@@ -163,6 +149,6 @@ Static Function ElimResid(nPerc, cTipo, dEmisDe, dEmisAte, cCodigoDe, cCodigoAte
 
 	If !vazio(cCodigoDe) .or. !cCodigoAte$('Z') // Nunca fazer para todos
 		Processa({|lEnd| MA235PC(nPerc, cTipo, dEmisDe, dEmisAte, cCodigoDe, cCodigoAte, cProdDe, cProdAte,;
-		cFornDe, cFornAte, dDatprfde, dDatPrfAte, cItemDe, cItemAte, lConsEIC, aRecSC7)})
+			cFornDe, cFornAte, dDatprfde, dDatPrfAte, cItemDe, cItemAte, lConsEIC, aRecSC7)})
 	Endif
 return

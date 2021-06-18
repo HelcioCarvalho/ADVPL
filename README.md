@@ -16,6 +16,7 @@ Aqui abaixo serão listadas as funções desenvolvidadas no repositório.
 
 - Rotina que faz a leitura de um arquivo .txt e chama a rotina automática de Eliminação de Resíduo.
 - Modelo de Arquivo.txt
+- Executa para empresas filiais diferentes, pode ser executada sem MENU, direto pelo VSCode
 
 ```
 01;001001;900370

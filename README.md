@@ -48,4 +48,14 @@ Fonte:
 * [📄 Fonte ](https://github.com/HelcioCarvalho/ADVPL/blob/1761908f59f08f7c9d74bce41a24d41dc786bac8/HFATA002.PRW)
 
 
+## 📋 Tela Seleção de Filiais
+
+Função/Tela Genérica para Marcação (MarkBrowse) das Filiais da Empresa Logada
+ ![image](https://user-images.githubusercontent.com/53917188/125635608-7524f050-6187-457c-9391-c83372e0eb99.png)
+
+Fonte: 
+* [📄 Fonte ](https://github.com/HelcioCarvalho/ADVPL/blob/1761908f59f08f7c9d74bce41a24d41dc786bac8/SelectFilial.PRW)
+
+
+
 

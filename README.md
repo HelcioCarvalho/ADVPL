@@ -69,3 +69,7 @@ Fonte:
 
 
 
+
+## 📋 Tela LOG  SHOWLOG
+![image](https://user-images.githubusercontent.com/53917188/149814195-709f9647-08ae-4bce-a57f-3ff52e791ba6.png)
+

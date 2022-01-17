@@ -64,3 +64,5 @@ Fonte:
 
 
 ![image](https://user-images.githubusercontent.com/53917188/149808070-77d911bc-33b0-40d2-b810-ba3747e18adb.png)
+
+* [📄 Fonte ] (https://github.com/HelcioCarvalho/ADVPL/blob/4b319d5a34065e3137d6ff599025c20b2ecedb51/SATCOM53.prw)

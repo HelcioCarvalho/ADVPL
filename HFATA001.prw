@@ -83,7 +83,7 @@ Static Function LerArquivo(cFile)
 		//Fecha o arquivo e finaliza o processamento
 		oFile:Close()
 	EndIf
-	
+
 	If len(aDadosElimina) > 0
 		If	ApMsgYesNo("Foram encontrados, "+cvaltochar(len(aDadosElimina))+" pedidos. Deseja realizar Eliminar Resíduo?")
 			Processa({|| EliminaPedido(aDadosElimina)},"Eliminando Resíduos...")
@@ -99,6 +99,7 @@ Static Function EliminaPedido(aDadosElimina)
 	Local i:= 1
 	Local cEmpresa 	:= ""
 	Local cFilialPC := ""
+	Local cTextoLog := ""
 	Default aParam          := Nil
 
 	PROCREGUA(Len(aDadosElimina))
@@ -117,9 +118,14 @@ Static Function EliminaPedido(aDadosElimina)
 		SC7->(DbSetOrder(1))
 		If SC7->(MsSeek(AVKEY(cFilial,"C7_FILIAL")+AVKEY(cNumPedido,"C7_NUM")))
 			ElimResid(100,1,SC7->C7_EMISSAO,SC7->C7_EMISSAO,SC7->C7_NUM,SC7->C7_NUM,"    ","ZZZZZ")
+			cTextoLog += "Eliminado Resíduo Pedido : " + cNumPedido + " Empresa : "+cEmpresa+" - Filial :"+cFilialPC + CRLF
 		Endif
 		RESET ENVIRONMENT
 	Next i
+
+	If !vazio(cTextoLog)
+		GravaLog(cTextoLog)
+	Endif
 Return
 
 
@@ -152,3 +158,25 @@ Static Function ElimResid(nPerc, cTipo, dEmisDe, dEmisAte, cCodigoDe, cCodigoAte
 			cFornDe, cFornAte, dDatprfde, dDatPrfAte, cItemDe, cItemAte, lConsEIC, aRecSC7)})
 	Endif
 return
+
+
+/*
+*/
+
+Static Function GravaLog(cTexto)
+	Local cPasta   := GetTempPath()
+	Local cArquivo := ProcName()+".txt"
+	Default cTexto := "Arquivo LOG"
+
+	oFWriter := FWFileWriter():New(cPasta + cArquivo, .T.)
+
+	If ! oFWriter:Create()
+		MsgStop("Houve um erro ao gerar o arquivo: " + CRLF + oFWriter:Error():Message, "Atenção")
+	Else
+		oFWriter:Write(cTexto + CRLF)
+		oFWriter:Close()
+		If MsgYesNo("Arquivo de LOG gerado com sucesso (" + cPasta + cArquivo + ")!" + CRLF + "Deseja abrir?", "Atenção")
+			ShellExecute("OPEN", cArquivo, "", cPasta, 1 )
+		EndIf
+	EndIf
+Return
